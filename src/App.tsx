@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import RequireAuth from './components/RequireAuth';
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Flashcards from './pages/Flashcards';
+import Dictionary from './pages/Dictionary';
+import Layout from './components/Layout';
+import {Home} from './pages/Home';
+import { Test } from './pages/Test';
+import { Awards } from './components/Awards';
+import { PersistLogin } from './components/PersistLogin';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+          <Route path='login' element={<Login/>}/>
+          {/* PROTECTED ROUTES */}
+          <Route element={<PersistLogin/>}>
+            <Route element={<RequireAuth/>}>
+              <Route path='home' element={<Home/>}/>
+              <Route path='study' element={<Flashcards/>}/>
+              <Route path='test'  element={<Test/>}/>
+              <Route path='dictionary' element={<Dictionary/>}/>
+              <Route path='awards' element={<Awards/>}/>
+              <Route path='/' element={<Home/>}>
+              <Route path='*' element={<Home/>}/>
+            </Route>
+          </Route>
+        </Route>
+      </Routes>
+    </>
   );
 }
 

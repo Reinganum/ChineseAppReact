@@ -1,38 +1,403 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62,5%;
+  height: 100%;
+}
+
+h1{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.layout-container{
+  display: flex;
+  height: 70vh;
+  width: 70vw;
+  background-color: #00ac89;
+}
+
+/* ////////////////////////// LOGIN PAGE STARTS ////////////////////////*/ 
+
+.login-image{
+  height: 100%;
+  width: 50%;
+  background-image: url('./assets/ilustracionChina.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60vw;
+}
+
+.form-container{
+  width: 20%;
+  height: 37.5vw;
+  display: flex;
+  background-color: orange;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-form-container{
+  background-color: #00ac89;
+  padding: 1rem;
+  height: 20vw;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 24px 24px 24px 24px;
+}
+
+.login-form-container input{
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: auto;
+    background: white(193, 188, 188);
+    padding: 12px;
+    width: 100%;
+    outline-color: rgb(101, 192, 232);
+    text-align: center;
+}
+
+.login-form-container button{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 90%;
+    margin: auto;
+    background-color: #0d5873;
+    border-radius: 24px;
+    border: none;
+    padding: 0.5rem;
+}
+
+/* ////////////////////////// LOGIN PAGE ENDS ////////////////////////*/ 
+
+/* ////////////////////////// MAIN PAGE STARTS ////////////////////////*/ 
+
+.personal-info-container{
+  height: 100%;
+  width: 20%;
+  background-color: orange;
+}
+
+.avatar-container{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.avatar{
+  background-image: url('./assets/venado.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vw;
+  width: 10vw;
+  margin: 2vh auto 2vh auto;
+  border-radius: 50%;
+}
+
+.avatar-form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input[type="file" i]{
+  overflow-x: hidden;
+}
+
+.list-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 75%;
+  margin: 0% 2.5% 0% 2.5%;
+  background-color:white;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.list{
+  height: fit-content;
+  width: 80%;
+  margin: 5px auto 5px auto;
+  outline: #0d5873;
+  outline-style: dotted;
+  border-radius: 24px 24px 24px 0px;
+  background-color: rgba(57, 5, 82, 0.3);
+}
+
+.selected{
+  background: rgba(57, 5, 82, 0.904) ;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.list-data{
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.create-list-container{
+  display: flex;
+  height: 8vh;
+  width: 40%;
+  margin-bottom: 1vw;
+  background-color: orangered;
+  padding: 10px;
+  z-index: 100;
+}
+
+.list-name-bar{
+  display: flex;
+  align-items: center;
+}
+
+.list-name-input{
+  height: 2rem;
+  margin: auto;
+  width: 70%;
+}
+
+.activity-icon{
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+.activity-icon.visibility{
+  background-color: orangered;
+  color: yellow;
+  border-radius: 50%;
+  padding: 5px;
+}
+.activity-icon.home-button{
+  background-color: #00ac89;
+  position: absolute;
+  margin-left: 31vw;
+}
+
+.popular-lists-container{
+  height: 200px;
+  width: 50%;
+  background-color: green;
+}
+
+.activity-icons-container{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-left: 55vw;
+  margin-top: -4vw;
+  height: 3vw;
+  width:15vw;
+  background-color: #0d5873;
+  border-radius: 24px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ////////////////////////// MAIN PAGE ENDS ////////////////////////*/ 
+
+/* ////////////////////////// FLASHCARD PAGE STARTS ////////////////////////*/ 
+a{
+  color: black;
+  word-wrap: break-word;
+  background-color: #00ac89;
+  text-decoration: underline;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.character{
+  font-size:6em;
+  margin-left: 4%;
+  background-color: black;
+  padding-inline: 1.6rem;
+  border-radius: 50%;
+}
+
+.character-info h3{
+  text-align: center;
+}
+
+.testcard-container{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background:rgba(57, 5, 82, 0.904) ;
+  width: 30vw;
+  height: 50vh;
+  align-items: center;
+  border-radius: 24px;
+  justify-content: center;
+}
+
+.study-session-info{
+  color: white;
+  text-align: center;
+}
+
+.testcard-container button{
+  margin-top: 20px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  background-color: #0d5873;
+  border-radius: 24px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.hidden{
+  display: none;
+}
+
+.animate-score{
+  position: absolute;
+  font-size: 8vw;
+  animation: fadeOutAnimation ease 1s, floatUp ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 0;
   }
+}
+@keyframes floatUp{
+  0%{
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* ////////////////////////// FLASHCARD PAGE ENDS ////////////////////////*/ 
+
+/* ////////////////////////// AWARD PAGE STARTS ////////////////////////*/ 
+.main-container-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.main-container-column h1{
+  color: white;
+}
+.award-container{
+  padding: 5vw;
+  display: grid;
+  width: fit-content;
+  text-align: center;
+  grid-template-columns: repeat(4,10vw);
+  background-color: black;
+  row-gap: 20px;
+}
+
+.award{
+  height: 8vw;
+  width: 8vw;
+  background-color: yellow;
+  border-radius: 24px;
+}
+
+.locked-award{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vw;
+  width: 8vw;
+  background-color: yellow;
+  opacity: 0.5;
+  border-radius: 24px;
+}
+
+.description{
+  display: none;
+}
+.award:hover .description{
+  display: block;
+}
+
+/* ////////////////////////// AWARD PAGE ENDS ////////////////////////*/ 
+
+.main-container.search{
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+.main-container h1{
+  color: white;
+  margin-right: 20px;
+}
+.search-bar-container{
+  display: flex;
+  width: fit-content;
+  background-color: rgba(223, 202, 16, 0.904);
+  padding: 2vw;
+  border-radius: 24px;
+  justify-items: space-between;
+}
+
+.search-button{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 8vw;
+    margin: auto;
+    background-color: #0d5873;
+    border: none;
+    padding: 0.5rem;
+}
+
+.dictionary-results-container{
+  padding: 5vw;
+  display: grid;
+  width: fit-content;
+  text-align: center;
+  grid-template-columns: repeat(4,10vw);
+  background-color: black;
+  overflow-y: auto;
+  gap: 20px;
+}
+
+.dictionary-character-container{
+  display: flex;
+  flex-direction: column;
+  height: 10vw;
+  flex-grow: 1;
+  background: rgba(3, 173, 240, 0.219);
+  border-radius: 12px;
+  overflow: auto;
+}
+
+.bottom-value{
+  flex-grow: 1;
+}
+
+.home-button-container{
+  margin-right: 25vw;
 }
